@@ -21,10 +21,12 @@ public class Main {
         // Probar inscripción de estudiantes
         academicManager.enrollStudent(student1);
         academicManager.enrollStudent(student2);
+        academicManager.enrollStudent(student1); //ya esta matriculado
 
         // Probar creación de cursos
         academicManager.addCourse(course1);
         academicManager.addCourse(course2);
+        academicManager.addCourse(course1); //Ya existe
         System.out.println("-----------------------");
 
         try {

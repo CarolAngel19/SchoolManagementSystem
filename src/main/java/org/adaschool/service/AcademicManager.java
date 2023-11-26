@@ -30,9 +30,9 @@ public class AcademicManager implements ServiciosAcademicosI {
     public void enrollStudent(Student student) {
         if (!students.contains(student)){
             students.add(student);
-            System.out.println("Estudiante registrado exitosamente");
+            System.out.println("Estudiante matriculado exitosamente");
         } else {
-            System.out.println("El estudiante ya esta registrado");
+            System.out.println("El estudiante ya esta matriculado");
         }
     }
 
@@ -41,15 +41,15 @@ public class AcademicManager implements ServiciosAcademicosI {
     public void addCourse(Course course) {
         if(!courses.contains(course)){
             courses.add(course);
-            System.out.println("Curso registrado exitosamente");
+            System.out.println("Curso agregado exitosamente");
         }else {
             System.out.println("El curso ya existe");
         }
     }
 
     @Override
-    public void enrollStudentCourse(Student student, int idCurso) throws StudentAlreadyEnrolledException {
-        Course course = findCourseById(idCurso);
+    public void enrollStudentCourse(Student student, int idCourse) throws StudentAlreadyEnrolledException {
+        Course course = findCourseById(idCourse);
 
         if (course != null) {
             if (enrolledStudents.containsKey(course)) {
